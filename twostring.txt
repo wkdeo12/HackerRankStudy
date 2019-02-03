@@ -1,0 +1,34 @@
+using System.Linq;
+using System;
+
+class Solution
+{
+
+    static string twoStrings(string s1, string s2)
+    {
+        var some = s1.Intersect(s2);
+        char[] love = some.ToArray();
+        if (love.Length > 0)
+        {
+            return "YES";
+        }
+        else return "NO";
+    }
+
+    static void Main(string[] args)
+    {
+        int q = Convert.ToInt32(Console.ReadLine());
+
+        for (int qItr = 0; qItr < q; qItr++)
+        {
+            string s1 = Console.ReadLine();
+
+            string s2 = Console.ReadLine();
+
+            string result = twoStrings(s1, s2);
+
+            Console.WriteLine(result);
+        }
+
+    }
+}
